@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+</head>
+<body>
+
+<div th:each="car : ${cars}">
+    <a th:href="@{/cars/{article}(article=${car.getArticle()})}"
+       th:text="${car.getCarBrand() + ', ' + car.getCarBody()}">cars</a>
+</div>
+
+<br/>
+<hr/>
+
+<!--<a href="/cars/count"></a>-->
+
+</body>
+</html>
