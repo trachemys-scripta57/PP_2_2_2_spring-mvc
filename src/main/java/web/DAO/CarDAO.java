@@ -2,9 +2,9 @@ package web.DAO;
 
 import org.springframework.stereotype.Component;
 import web.model.Car;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Component
@@ -27,8 +27,11 @@ public class CarDAO {
         return cars;
     }
 
-    public Car show(int article) {
-        return cars.stream().filter(car -> car.getArticle() == article)
-                .findAny().orElse(null);
+    public List<Car> show(Integer count) {
+        cars = index();
+
+        return count == null || count <= 0 ? cars : cars.stream()
+                .limit(count)
+                .collect(Collectors.toList());
     }
 }
