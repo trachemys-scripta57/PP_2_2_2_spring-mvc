@@ -9,7 +9,7 @@
 
 <div th:each="car : ${cars}">
     <a th:href="@{/cars/{article}(article=${car.getArticle()})}"
-       th:text="${car.getCarBrand() + ', ' + car.getCarBody()}">cars</a>
+       th:text="${car.getArticle() + ', ' + car.getCarBrand() + ', ' + car.getCarBody()}">cars</a>
 </div>
 
 <br/>

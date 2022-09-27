@@ -6,21 +6,24 @@ import web.model.Car;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Component
 public class CarDAO {
-    private static int CAR_COUNT;
 
-    private List<Car> cars;
+    private static List<Car> cars;
+
     {
         cars = new ArrayList<>();
 
-        cars.add(new Car(++CAR_COUNT, "VW", "wagon"));
-        cars.add(new Car(++CAR_COUNT, "Audi", "coupe"));
-        cars.add(new Car(++CAR_COUNT, "Nissan", "hatchback"));
-        cars.add(new Car(++CAR_COUNT, "Лада", "седан"));
-        cars.add(new Car(++CAR_COUNT, "УАЗ", "внедорожник"));
+        cars.add(new Car(1, "VW", "wagon"));
+        cars.add(new Car(2, "Audi", "coupe"));
+        cars.add(new Car(3, "Nissan", "hatchback"));
+        cars.add(new Car(4, "Лада", "седан"));
+        cars.add(new Car(5, "УАЗ", "внедорожник"));
     }
+
     public List<Car> index() {
+
         return cars;
     }
 
