@@ -5,44 +5,21 @@ public class Car {
     private String carBrand;
     private String carBody;
 
-    public Car() {}
-
     public Car(int article, String carBrand, String carBody) {
         this.article = article;
         this.carBrand = carBrand;
         this.carBody = carBody;
     }
 
-    public int getArticle() {
+    public int getArticle() { //используется в представлении
         return article;
     }
 
-    public void setArticle(int article) {
-        this.article = article;
-    }
-
-    public String getCarBrand() {
+    public String getCarBrand() { //используется в представлении
         return carBrand;
     }
 
-    public void setCarBrand(String carBrand) {
-        this.carBrand = carBrand;
-    }
-
-    public String getCarBody() {
+    public String getCarBody() { //используется в представлении
         return carBody;
-    }
-
-    public void setCarBody(String carBody) {
-        this.carBody = carBody;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "article=" + article +
-                ", carBrand='" + carBrand + '\'' +
-                ", carBody='" + carBody + '\'' +
-                '}';
     }
 }

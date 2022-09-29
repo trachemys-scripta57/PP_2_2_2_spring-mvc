@@ -11,7 +11,6 @@ import web.model.Car;
 import java.util.List;
 
 @Controller
-//@RequestMapping("/cars")
 public class CarController {
 
     private final CarDAO carDAO;
@@ -24,7 +23,6 @@ public class CarController {
 
     @GetMapping("cars")
     public String show(@RequestParam(value = "count", required = false) Integer count, Model model) {
-//        System.out.println(count);
         List<Car> cars = carDAO.show(count);
         model.addAttribute("cars", cars);
 
